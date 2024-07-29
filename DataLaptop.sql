@@ -4,14 +4,14 @@ GO
 IF EXISTS (
     SELECT [name]
         FROM sys.databases
-        WHERE [name] ='CuahangLaptop'
+        WHERE [name] ='LapStore'
 )
-DROP DATABASE CuahangLaptop
+DROP DATABASE LapStore
 GO
 
-CREATE database CuahangLaptop
+CREATE database LapStore
 GO
-use CuahangLaptop
+use LapStore
 GO
 
 create table Category(
