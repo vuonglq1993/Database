@@ -18,7 +18,7 @@ GO
 Create table Model
 (
     ModelId int Primary key,
-    CatName nvarchar,
+    CatName nvarchar(50),
     Brandname nvarchar,
     ModelName nvarchar,
 );

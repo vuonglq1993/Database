@@ -1,0 +1,93 @@
+USE LapStore
+
+INSERT INTO Model (ModelId, CatName, Brandname, ModelName)
+VALUES
+(1, N'Hàng mới', 'Dell', 'XPS 13'),
+(2, N'Hàng mới', 'HP', 'Spectre x360'),
+(3, N'Hàng mới', 'Apple', 'MacBook Air'),
+(4, N'Hàng mới', 'Lenovo', 'ThinkPad X1'),
+(5, N'Hàng mới', 'Asus', 'ZenBook 14'),
+(6, N'Hàng cũ', 'Acer', 'Swift 3'),
+(7, N'Hàng cũ', 'MSI', 'GF63 Thin'),
+(8, N'Hàng cũ', 'Gigabyte', 'AORUS 15G'),
+(9, N'Hàng cũ', 'Razer', 'Blade 15'),
+(10, N'Hàng cũ', 'Huawei', 'MateBook X Pro'),
+(11, N'Hàng mới', 'LG', 'Gram 17'),
+(12, N'Hàng mới', 'Samsung', 'Galaxy Book Pro'),
+(13, N'Hàng mới', 'Microsoft', 'Surface Laptop 4'),
+(14, N'Hàng mới', 'Xiaomi', 'Mi Notebook Pro'),
+(15, N'Hàng mới', 'Razer', 'Blade Stealth 13'),
+(16, N'Hàng mới', 'Asus', 'ROG Flow Z13'),
+(17, N'Hàng cũ', 'Dell', 'Inspiron 14'),
+(18, N'Hàng cũ', 'HP', 'Envy 13'),
+(19, N'Hàng cũ', 'Lenovo', 'Legion 5'),
+(20, N'Hàng cũ', 'Apple', 'MacBook Pro 16');
+
+INSERT INTO ProductDetails (ProductDetailId, RAM, Graphic, CPU, Display, Types)
+VALUES
+(1, '8GB', 'Intel Iris Xe', 'Intel i5-1135G7', '13.4" 1920x1200', 'Laptop'),
+(2, '16GB', 'NVIDIA GeForce MX330', 'Intel i7-1165G7', '13.3" 1920x1080', 'Laptop'),
+(3, '8GB', 'Integrated', 'Apple M1', '13.3" 2560x1600', 'Laptop'),
+(4, '16GB', 'Intel Iris Xe', 'Intel i7-1185G7', '14" 1920x1080', 'Laptop'),
+(5, '16GB', 'NVIDIA GeForce MX250', 'Intel i7-10510U', '14" 1920x1080', 'Laptop'),
+(6, '8GB', 'Intel UHD', 'Intel i5-1135G7', '14" 1920x1080', 'Laptop'),
+(7, '8GB', 'NVIDIA GeForce GTX 1650', 'Intel i5-9300H', '15.6" 1920x1080', 'Laptop'),
+(8, '16GB', 'NVIDIA GeForce RTX 3060', 'Intel i7-11800H', '15.6" 2560x1440', 'Laptop'),
+(9, '16GB', 'NVIDIA GeForce RTX 3070', 'Intel i7-11800H', '15.6" 3840x2160', 'Laptop'),
+(10, '16GB', 'Intel Iris Xe', 'Intel i7-11370H', '13.9" 3000x2000', 'Laptop'),
+(11, '16GB', 'Intel Iris Xe', 'Intel i7-1165G7', '17" 2560x1600', 'Laptop'),
+(12, '8GB', 'Intel Iris Xe', 'Intel i5-1135G7', '15.6" 1920x1080', 'Laptop'),
+(13, '16GB', 'Intel Iris Xe', 'Intel i7-1185G7', '15" 2256x1504', 'Laptop'),
+(14, '16GB', 'NVIDIA GeForce MX250', 'Intel i7-10510U', '15.6" 1920x1080', 'Laptop'),
+(15, '8GB', 'Intel Iris Xe', 'Intel i7-1165G7', '13.3" 1920x1080', 'Laptop'),
+(16, '16GB', 'NVIDIA GeForce RTX 3050', 'Intel i7-12650H', '13.4" 2560x1600', 'Laptop'),
+(17, '8GB', 'Intel Iris Xe', 'Intel i5-1135G7', '14" 1920x1080', 'Laptop'),
+(18, '16GB', 'NVIDIA GeForce MX330', 'Intel i7-1165G7', '13.3" 1920x1080', 'Laptop'),
+(19, '16GB', 'NVIDIA GeForce GTX 1650', 'AMD Ryzen 7 5800H', '15.6" 1920x1080', 'Laptop'),
+(20, '16GB', 'AMD Radeon Pro', 'Apple M1 Pro', '16" 3456x2234', 'Laptop');
+
+INSERT INTO Products (ProductId, ModelId, ProductName, ProductDetailsId, Stock, Price, Waranty, Discount)
+VALUES
+(1, 1, 'Dell XPS 13', 1, 10, 28000.00, '2 năm', 5.0),
+(2, 2, 'HP Spectre x360', 2, 8, 32000.00, '2 năm', 7.5),
+(3, 3, 'MacBook Air', 3, 15, 25000.00, '1 năm', 10.0),
+(4, 4, 'ThinkPad X1', 4, 5, 29000.00, '3 năm', 6.0),
+(5, 5, 'ZenBook 14', 5, 12, 27000.00, '2 năm', 8.0),
+(6, 6, 'Acer Swift 3', 6, 14, 22000.00, '2 năm', 6.5),
+(7, 7, 'MSI GF63 Thin', 7, 9, 20000.00, '1 năm', 7.0),
+(8, 8, 'AORUS 15G', 8, 7, 35000.00, '1 năm', 5.5),
+(9, 9, 'Razer Blade 15', 9, 6, 45000.00, '1 năm', 10.0),
+(10, 10, 'MateBook X Pro', 10, 8, 26000.00, '2 năm', 7.0),
+(11, 11, 'LG Gram 17', 11, 5, 33000.00, '2 năm', 8.0),
+(12, 12, 'Galaxy Book Pro', 12, 10, 24000.00, '1 năm', 6.0),
+(13, 13, 'Surface Laptop 4', 13, 12, 27000.00, '1 năm', 7.5),
+(14, 14, 'Mi Notebook Pro', 14, 9, 25000.00, '2 năm', 6.5),
+(15, 15, 'Blade Stealth 13', 15, 7, 29000.00, '1 năm', 8.0),
+(16, 16, 'ROG Flow Z13', 16, 6, 32000.00, '2 năm', 7.0),
+(17, 17, 'Inspiron 14', 17, 11, 23000.00, '2 năm', 6.0),
+(18, 18, 'Envy 13', 18, 8, 21000.00, '2 năm', 5.5),
+(19, 19, 'Legion 5', 19, 10, 29000.00, '2 năm', 8.0),
+(20, 20, 'MacBook Pro 16', 20, 7, 45000.00, '1 năm', 10.0);
+
+INSERT INTO Products (ProductId, ModelId, ProductName, ProductDetailsId, Stock, Price, Waranty, Discount)
+VALUES
+(1, 1, 'Dell XPS 13', 1, 10, 28000.00, '2 năm', 5.0),
+(2, 2, 'HP Spectre x360', 2, 8, 32000.00, '2 năm', 7.5),
+(3, 3, 'MacBook Air', 3, 15, 25000.00, '1 năm', 10.0),
+(4, 4, 'ThinkPad X1', 4, 5, 29000.00, '3 năm', 6.0),
+(5, 5, 'ZenBook 14', 5, 12, 27000.00, '2 năm', 8.0),
+(6, 6, 'Acer Swift 3', 6, 14, 22000.00, '2 năm', 6.5),
+(7, 7, 'MSI GF63 Thin', 7, 9, 20000.00, '1 năm', 7.0),
+(8, 8, 'AORUS 15G', 8, 7, 35000.00, '1 năm', 5.5),
+(9, 9, 'Razer Blade 15', 9, 6, 45000.00, '1 năm', 10.0),
+(10, 10, 'MateBook X Pro', 10, 8, 26000.00, '2 năm', 7.0),
+(11, 11, 'LG Gram 17', 11, 5, 33000.00, '2 năm', 8.0),
+(12, 12, 'Galaxy Book Pro', 12, 10, 24000.00, '1 năm', 6.0),
+(13, 13, 'Surface Laptop 4', 13, 12, 27000.00, '1 năm', 7.5),
+(14, 14, 'Mi Notebook Pro', 14, 9, 25000.00, '2 năm', 6.5),
+(15, 15, 'Blade Stealth 13', 15, 7, 29000.00, '1 năm', 8.0),
+(16, 16, 'ROG Flow Z13', 16, 6, 32000.00, '2 năm', 7.0),
+(17, 17, 'Inspiron 14', 17, 11, 23000.00, '2 năm', 6.0),
+(18, 18, 'Envy 13', 18, 8, 21000.00, '2 năm', 5.5),
+(19, 19, 'Legion 5', 19, 10, 29000.00, '2 năm', 8.0),
+(20, 20, 'MacBook Pro 16', 20, 7, 45000.00, '1 năm', 10.0);
