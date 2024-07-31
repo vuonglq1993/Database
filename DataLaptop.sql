@@ -14,40 +14,15 @@ GO
 use LapStore
 GO
 
-create table Category
-(
-    Catid int primary key,
-    CatName nvarchar
-);
-
-create Table Brand
-(
-    BrandId int primary key,
-    Catid int,
-    BrandName nvarchar,
-    CONSTRAINT fkc FOREIGN KEY (Catid) REFERENCES Category (Catid)
-);
 
 Create table Model
 (
     ModelId int Primary key,
-    BrandId int,
+    CatName nvarchar,
+    Brandname nvarchar,
     ModelName nvarchar,
-    Constraint fkb Foreign key(BrandId) references Brand(BrandId),
 );
 
-create Table Waranty
-(
-    WarantyId int primary key,
-    WarantyLong nvarchar
-);
-
-create Table ProductDiscount
-(
-    DiscountId int primary key,
-    DiscountName nvarchar,
-    DiscountRate float
-)
 
 Create Table ProductDetails
 (
@@ -56,7 +31,7 @@ Create Table ProductDetails
     Graphic varchar,
     CPU varchar,
     Display varchar,
-    type varchar,
+    Types varchar,
 );
 
 Create Table Products
@@ -65,41 +40,52 @@ Create Table Products
     ModelId int,
     ProductName nvarchar,
     ProductDetailsId int,
-    Stock int,
-    Price money,
-    WarantyId int,
-    DiscountId int,
+    Stock int null,
+    Price money not null,
+    Waranty NVARCHAR,
+    Discount float,
     constraint fkm FOReign key (ModelId) REFERENCES Model (ModelId),
     CONSTRAINT fkpd FOREIGN KEY (ProductDetailsId) REFERENCES ProductDetails (ProductDetailId),
-    CONSTRAINT fkw FOREIGN KEY (WarantyId) REFERENCES Waranty (WarantyId),
-    CONSTRAINT fkd FOREIGN KEY (DiscountId) REFERENCES ProductDiscount (DiscountId)
+);
+
+
+
+Create Table District
+(
+    DistrictId int primary key,
+    CityName nvarchar,
+    DistrictName nvarchar,
 );
 
 Create Table Customer
 (
     CustomerID int PRIMARY KEY,
-    CustomerName nvarchar,
-    Phone varchar,
+    CustomerFirstName nvarchar(100),
+    CustomerLastName nvarchar(100),
+    Phone varchar(10),
     DistrictId int,
     Addresss nvarchar,
     Email varchar,
+    CONSTRAINT fkdistrict FOREIGN KEY (DistrictId) REFERENCES District (DistrictId)
 );
 
-
-Create Table Stock
+Create Table Orderrs
 (
-    Stockid int primary key,
-    Productid int,
-    Storeid int,
-    Quantity int,
+    OrderId int primary key,
+    CustomerId int,
+    OrderDate date,
+    Statuss nvarchar(15),
+    TotalAmount Money,
+    CONSTRAINT fkccc FOREIGN KEY (CustomerId) REFERENCES Customer (CustomerID)
 );
 
-Create Table Brand{
-  BrandId int primary key,
-  Catid int,
-  BrandName nvarchar,
-  BrandAddress NVARCHAR
-}
+create Table Voucher
+(
+    VoucherId int primary key,
+    VoucherName nvarchar(20),
+    VoucherRate float,
+    VoucherExpires date,
+);
 
 create Table Reviews
 (
@@ -107,57 +93,18 @@ create Table Reviews
     ProductId int,
     CustomerId int,
     Rating int,
-    Comment nvarchar,
-    Commentdate datetime,
+    Comment text,
+    Commentdate date,
     CONSTRAINT fkp FOREIGN KEY (ProductId) REFERENCES Products (ProductId),
     CONSTRAINT fkcc FOREIGN KEY (CustomerId) REFERENCES Customer (CustomerID)
 );
 
-
-Create Table Country
-(
-    CountryId int primary key,
-    CountryName nvarchar,
-)
-
-Create Table City
-(
-    CityId int primary key,
-    CountryId int,
-    CityName nvarchar,
-    CONSTRAINT fkcountry FOREIGN key (CountryId) REFERENCES Country(CountryId)
+create table Store(
+  StoreId int primary key,
+  StoreName varchar(20),
+  StoreAddress nvarchar(100),
 );
 
-Create Table District
-(
-    DistrictId int primary key,
-    CityId int,
-    DistrictName nvarchar,
-    CONSTRAINT fkcity FOREIGN KEY (CityId) References City (CityId)
-);
-
-Create Table Orderrs
-(
-    OrderId int primary key,
-    CustomerId int,
-    OrderDate datetime,
-    CONSTRAINT fkccc FOREIGN KEY (CustomerId) REFERENCES Customer (CustomerID)
-);
-
-create Table Voucher
-(
-    VoucherId int primary key,
-    CustomerId int,
-    VoucherName nvarchar,
-    VoucherRate float,
-    CONSTRAINT fkcccc FOREIGN KEY (CustomerId) REFERENCES Customer (CustomerID)
-);
-
-Create Table Payment
-(
-    PaymentId int primary key,
-    PaymentInformation nvarchar
-);
 
 Create Table OrderDetails
 (
@@ -166,9 +113,17 @@ Create Table OrderDetails
     ProductId int,
     Quantity int,
     VoucherId int,
-    PaymentId int,
+    PaymentMethods varchar(1) not null,
     constraint fko FOREIGN KEY(OrderId) REFERENCES Orderrs (OrderId),
     CONSTRAINT fkpp FOREIGN KEY (ProductId) REFERENCES Products (ProductId),
     Constraint fkv Foreign KEY (VoucherId) REFERENCES Voucher (VoucherId),
-    CONSTRAINT fkpay FOREIGN KEY (PaymentId) REFERENCES Payment (PaymentId)
+);
+
+
+UPDATE Orderrs
+SET TotalAmount = (
+    SELECT SUM(p.Price * od.Quantity)
+    FROM OrderDetails od
+    JOIN Products p ON od.ProductId = p.ProductId
+    WHERE od.OrderId = Orderrs.OrderId
 );
