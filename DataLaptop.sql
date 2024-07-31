@@ -93,7 +93,7 @@ create Table Reviews
     ProductId int,
     CustomerId int,
     Rating int,
-    Comment text,
+    Comment ntext,
     Commentdate date,
     CONSTRAINT fkp FOREIGN KEY (ProductId) REFERENCES Products (ProductId),
     CONSTRAINT fkcc FOREIGN KEY (CustomerId) REFERENCES Customer (CustomerID)
