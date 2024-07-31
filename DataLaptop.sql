@@ -42,7 +42,7 @@ Create Table Products
     ProductDetailsId int,
     Stock int null,
     Price money not null,
-    Waranty NVARCHAR,
+    Waranty NVARCHAR(20),
     Discount float,
     constraint fkm FOReign key (ModelId) REFERENCES Model (ModelId),
     CONSTRAINT fkpd FOREIGN KEY (ProductDetailsId) REFERENCES ProductDetails (ProductDetailId),
