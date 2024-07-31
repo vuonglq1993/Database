@@ -18,27 +18,27 @@ GO
 Create table Model
 (
     ModelId int Primary key,
-    CatName nvarchar,
-    Brandname nvarchar,
-    ModelName nvarchar,
+    CatName nvarchar(50),
+    Brandname nvarchar(50),
+    ModelName nvarchar(50),
 );
 
 
 Create Table ProductDetails
 (
     ProductDetailId int primary key,
-    RAM varchar,
-    Graphic varchar,
-    CPU varchar,
-    Display varchar,
-    Types varchar,
+    RAM varchar(20),
+    Graphic varchar(20),
+    CPU varchar(20),
+    Display varchar(20),
+    Types varchar(50),
 );
 
 Create Table Products
 (
     ProductId int primary key,
     ModelId int,
-    ProductName nvarchar,
+    ProductName nvarchar(100),
     ProductDetailsId int,
     Stock int null,
     Price money not null,
@@ -53,8 +53,8 @@ Create Table Products
 Create Table District
 (
     DistrictId int primary key,
-    CityName nvarchar,
-    DistrictName nvarchar,
+    CityName nvarchar(100),
+    DistrictName nvarchar(100),
 );
 
 Create Table Customer
@@ -64,7 +64,7 @@ Create Table Customer
     CustomerLastName nvarchar(100),
     Phone varchar(10),
     DistrictId int,
-    Addresss nvarchar,
+    Addresss nvarchar(100),
     Email varchar,
     CONSTRAINT fkdistrict FOREIGN KEY (DistrictId) REFERENCES District (DistrictId)
 );
