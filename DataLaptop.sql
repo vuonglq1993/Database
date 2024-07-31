@@ -65,7 +65,7 @@ Create Table Customer
     Phone varchar(10),
     DistrictId int,
     Addresss nvarchar(100),
-    Email varchar,
+    Email varchar(100),
     CONSTRAINT fkdistrict FOREIGN KEY (DistrictId) REFERENCES District (DistrictId)
 );
 
@@ -82,7 +82,7 @@ Create Table Orderrs
 create Table Voucher
 (
     VoucherId int primary key,
-    VoucherName nvarchar(20),
+    VoucherName nvarchar(100),
     VoucherRate float,
     VoucherExpires date,
 );
@@ -101,7 +101,7 @@ create Table Reviews
 
 create table Store(
   StoreId int primary key,
-  StoreName varchar(20),
+  StoreName varchar(100),
   StoreAddress nvarchar(100),
 );
 
