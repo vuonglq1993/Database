@@ -27,11 +27,11 @@ Create table Model
 Create Table ProductDetails
 (
     ProductDetailId int primary key,
-    RAM varchar(20),
-    Graphic varchar(20),
-    CPU varchar(20),
-    Display varchar(20),
-    Types varchar(50),
+    RAM varchar(100),
+    Graphic varchar(100),
+    CPU varchar(100),
+    Display varchar(100),
+    Types varchar(100),
 );
 
 Create Table Products
