@@ -48,28 +48,28 @@ VALUES
 (20, '16GB', 'AMD Radeon Pro', 'Apple M1 Pro', '16" 3456x2234', 'Laptop');
 GO
 
-INSERT INTO Products (ProductId, ModelId, ProductName, ProductDetailsId, Stock, Price, Waranty, Discount)
+INSERT INTO Products (ProductId, ModelId, ProductName, ProductDetailsId, Stock, Price, PriceAfterDiscount, Waranty, Discount)
 VALUES
-(1, 1, 'Dell XPS 13', 1, 10, 28000.00, N'2 năm', 5.0),
-(2, 2, 'HP Spectre x360', 2, 8, 32000.00, N'2 năm', 7.5),
-(3, 3, 'MacBook Air', 3, 15, 25000.00, N'1 năm', 10.0),
-(4, 4, 'ThinkPad X1', 4, 5, 29000.00, N'3 năm', 6.0),
-(5, 5, 'ZenBook 14', 5, 12, 27000.00, N'2 năm', 8.0),
-(6, 6, 'Acer Swift 3', 6, 14, 22000.00, N'2 năm', 6.5),
-(7, 7, 'MSI GF63 Thin', 7, 9, 20000.00, N'1 năm', 7.0),
-(8, 8, 'AORUS 15G', 8, 7, 35000.00, N'1 năm', 5.5),
-(9, 9, 'Razer Blade 15', 9, 6, 45000.00, N'1 năm', 10.0),
-(10, 10, 'MateBook X Pro', 10, 8, 26000.00, N'2 năm', 7.0),
-(11, 11, 'LG Gram 17', 11, 5, 33000.00, N'2 năm', 8.0),
-(12, 12, 'Galaxy Book Pro', 12, 10, 24000.00, N'1 năm', 6.0),
-(13, 13, 'Surface Laptop 4', 13, 12, 27000.00, N'1 năm', 7.5),
-(14, 14, 'Mi Notebook Pro', 14, 9, 25000.00, N'2 năm', 6.5),
-(15, 15, 'Blade Stealth 13', 15, 7, 29000.00, N'1 năm', 8.0),
-(16, 16, 'ROG Flow Z13', 16, 6, 32000.00, N'2 năm', 7.0),
-(17, 17, 'Inspiron 14', 17, 11, 23000.00, N'2 năm', 6.0),
-(18, 18, 'Envy 13', 18, 8, 21000.00, N'2 năm', 5.5),
-(19, 19, 'Legion 5', 19, 10, 29000.00, N'2 năm', 8.0),
-(20, 20, 'MacBook Pro 16', 20, 7, 45000.00, N'1 năm', 10.0);
+(1, 1, 'Dell XPS 13', 1, 10, 28000.00, 28000.00 * (1 - 5.0 / 100), N'2 năm', 5.0),
+(2, 2, 'HP Spectre x360', 2, 8, 32000.00, 32000.00 * (1 - 7.5 / 100), N'2 năm', 7.5),
+(3, 3, 'MacBook Air', 3, 15, 25000.00, 25000.00 * (1 - 10.0 / 100), N'1 năm', 10.0),
+(4, 4, 'ThinkPad X1', 4, 5, 29000.00, 29000.00 * (1 - 6.0 / 100), N'3 năm', 6.0),
+(5, 5, 'ZenBook 14', 5, 12, 27000.00, 27000.00 * (1 - 8.0 / 100), N'2 năm', 8.0),
+(6, 6, 'Acer Swift 3', 6, 14, 22000.00, 22000.00 * (1 - 6.5 / 100), N'2 năm', 6.5),
+(7, 7, 'MSI GF63 Thin', 7, 9, 20000.00, 20000.00 * (1 - 7.0 / 100), N'1 năm', 7.0),
+(8, 8, 'AORUS 15G', 8, 7, 35000.00, 35000.00 * (1 - 5.5 / 100), N'1 năm', 5.5),
+(9, 9, 'Razer Blade 15', 9, 6, 45000.00, 45000.00 * (1 - 10.0 / 100), N'1 năm', 10.0),
+(10, 10, 'MateBook X Pro', 10, 8, 26000.00, 26000.00 * (1 - 7.0 / 100), N'2 năm', 7.0),
+(11, 11, 'LG Gram 17', 11, 5, 33000.00, 33000.00 * (1 - 8.0 / 100), N'2 năm', 8.0),
+(12, 12, 'Galaxy Book Pro', 12, 10, 24000.00, 24000.00 * (1 - 6.0 / 100), N'1 năm', 6.0),
+(13, 13, 'Surface Laptop 4', 13, 12, 27000.00, 27000.00 * (1 - 7.5 / 100), N'1 năm', 7.5),
+(14, 14, 'Mi Notebook Pro', 14, 9, 25000.00, 25000.00 * (1 - 6.5 / 100), N'2 năm', 6.5),
+(15, 15, 'Blade Stealth 13', 15, 7, 29000.00, 29000.00 * (1 - 8.0 / 100), N'1 năm', 8.0),
+(16, 16, 'ROG Flow Z13', 16, 6, 32000.00, 32000.00 * (1 - 7.0 / 100), N'2 năm', 7.0),
+(17, 17, 'Inspiron 14', 17, 11, 23000.00, 23000.00 * (1 - 6.0 / 100), N'2 năm', 6.0),
+(18, 18, 'Envy 13', 18, 8, 21000.00, 21000.00 * (1 - 5.5 / 100), N'2 năm', 5.5),
+(19, 19, 'Legion 5', 19, 10, 29000.00, 29000.00 * (1 - 8.0 / 100), N'2 năm', 8.0),
+(20, 20, 'MacBook Pro 16', 20, 7, 45000.00, 45000.00 * (1 - 10.0 / 100), N'1 năm', 10.0);
 GO
 
 INSERT INTO District (DistrictId, CityName, DistrictName)
@@ -234,4 +234,113 @@ JOIN
     Model m ON p.ModelId = m.ModelId
 JOIN 
     ProductDetails pd ON p.ProductDetailsId = pd.ProductDetailId;
+GO
+
+-- Liệt kê các danh mục sản phẩm
+SELECT DISTINCT
+    M.CatName
+FROM
+    Model M
+ORDER BY
+    M.CatName;
+GO
+
+-- Liệt kê các thương hiệu (Brand) theo danh mục (Category)
+SELECT DISTINCT
+    M.CatName,
+    M.Brandname
+FROM
+    Model M
+ORDER BY
+    M.CatName,
+    M.Brandname;
+GO
+
+-- Liệt kê các Model theo Category và Brand
+SELECT DISTINCT
+    M.CatName,
+    M.Brandname,
+    M.ModelName
+FROM
+    Model M
+ORDER BY
+    M.CatName,
+    M.Brandname,
+    M.ModelName;
+GO
+
+-- Liệt kê chi tiết sản phẩm theo Category, Brand, Model
+SELECT
+    M.CatName,
+    M.Brandname,
+    M.ModelName,
+    P.ProductName,
+    P.Price,
+    P.PriceAfterDiscount,
+    P.Stock,
+    PD.RAM,
+    PD.Graphic,
+    PD.CPU,
+    PD.Display,
+    PD.Types
+FROM
+    Products P
+JOIN
+    Model M ON P.ModelId = M.ModelId
+JOIN
+    ProductDetails PD ON P.ProductDetailsId = PD.ProductDetailId
+WHERE
+    M.CatName = N'Hàng Mới' 
+    AND M.Brandname = 'Dell'
+    AND M.ModelName = 'XPS 13' 
+ORDER BY
+    P.ProductName;
+GO
+
+-- Truy vấn sản phẩm và phân loại giá theo giảm giá hoặc không giảm giá
+SELECT
+    ProductId,
+    ProductName,
+    Stock,
+    Price,
+    PriceAfterDiscount,
+    Waranty,
+    Discount,
+    CASE 
+        WHEN Discount > 0 THEN PriceAfterDiscount
+        ELSE Price
+    END AS EffectivePrice
+FROM
+    Products;
+GO
+
+-- Truy vấn sản phẩm có áp dụng giảm giá
+SELECT
+    ProductId,
+    ProductName,
+    Stock,
+    Price,
+    PriceAfterDiscount,
+    Waranty,
+    Discount
+FROM
+    Products
+WHERE
+    Discount > 0;
+GO
+
+SELECT
+    ProductId,
+    ProductName,
+    Price,
+    PriceAfterDiscount,
+    Stock,
+    Waranty,
+    Discount
+FROM
+    Products
+WHERE
+    Price BETWEEN 20000.00 AND 30000.00
+ORDER BY
+    Price;
 GO
