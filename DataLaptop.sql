@@ -1,4 +1,6 @@
-
+--BÀI TẬP NHÓM HỘI NGƯỜI CAO TUỔI
+-- LÊ QUÝ VƯỢNG: THIẾT KẾ DATABASE, TẠO BẢNG, BỔ SUNG 1 SỐ TRUY VẤN
+-- ĐẶNG QUANG HUY: NHẬP DỮ LIỆU BẢNG TRONG FILE SQLQUERY_1
 USE master
         GO
 
