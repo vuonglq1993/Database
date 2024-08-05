@@ -156,3 +156,23 @@ INNER JOIN
 GROUP BY 
     OrderDetails.OrderId;
 
+UPDATE Orderrs
+SET TotalAmount = (
+    SELECT 
+        SUM((p.Price * (1 - p.Discount / 100)) * od.Quantity * (1 - ISNULL(v.VoucherRate, 0) / 100))
+    FROM 
+        OrderDetails od
+    JOIN 
+        Products p ON od.ProductId = p.ProductId
+    LEFT JOIN 
+        Voucher v ON od.VoucherId = v.VoucherId
+    WHERE 
+        od.OrderId = Orderrs.OrderId
+)
+WHERE 
+    EXISTS (
+        SELECT 1 
+        FROM OrderDetails od
+        WHERE od.OrderId = Orderrs.OrderId
+    );
+GO
