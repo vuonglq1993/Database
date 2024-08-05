@@ -100,3 +100,59 @@ VALUES
 (19, 19, 19, 1, 19, 'D'),
 (20, 20, 20, 1, 20, 'C');
 GO
+
+-- Lấy tất cả các đơn hàng
+SELECT * FROM Orderrs;
+
+-- Lấy các đơn hàng đang xử lý
+SELECT * FROM Orderrs WHERE Statuss = N'Đang xử lý';
+
+-- Lấy các đơn hàng đã hoàn thành
+SELECT * FROM Orderrs WHERE Statuss = N'Hoàn thành';
+
+-- Lấy các đơn hàng đã bị hủy
+SELECT * FROM Orderrs WHERE Statuss = N'Đã hủy';
+
+-- Lấy tất cả các voucher
+SELECT * FROM Voucher;
+
+-- Lấy các voucher còn hiệu lực (trước ngày hiện tại)
+SELECT * FROM Voucher WHERE VoucherExpires >= GETDATE();
+
+-- Lấy các voucher đã hết hạn (sau ngày hiện tại)
+SELECT * FROM Voucher WHERE VoucherExpires < GETDATE();
+
+-- Lấy tất cả các cửa hàng
+SELECT * FROM Store;
+
+-- Lấy các cửa hàng ở Hà Nội
+SELECT * FROM Store WHERE StoreAddress LIKE N'%Hà Nội%';
+
+-- Lấy các cửa hàng ở Hồ Chí Minh
+SELECT * FROM Store WHERE StoreAddress LIKE N'%Hồ Chí Minh%';
+
+-- Lấy các cửa hàng ở Đà Nẵng
+SELECT * FROM Store WHERE StoreAddress LIKE N'%Đà Nẵng%';
+
+-- Lấy tất cả các chi tiết đơn hàng
+SELECT * FROM OrderDetails;
+
+-- Lấy các chi tiết đơn hàng sử dụng voucher có mã 1
+SELECT * FROM OrderDetails WHERE VoucherId = 1;
+
+-- Lấy các chi tiết đơn hàng thanh toán bằng thẻ (ký hiệu 'C')
+SELECT * FROM OrderDetails WHERE PaymentMethods = 'C';
+
+-- Lấy các chi tiết đơn hàng thanh toán bằng tiền mặt (ký hiệu 'D')
+SELECT * FROM OrderDetails WHERE PaymentMethods = 'D';
+
+SELECT 
+    OrderDetails.OrderId,
+    SUM(OrderDetails.Quantity * Product.UnitPrice) AS TotalAmount
+FROM 
+    OrderDetails
+INNER JOIN
+    Product ON OrderDetails.ProductId = Product.ProductId
+GROUP BY 
+    OrderDetails.OrderId;
+
