@@ -50,98 +50,98 @@ GO
 
 INSERT INTO Products (ProductId, ModelId, ProductName, ProductDetailsId, Stock, Price, Waranty, Discount)
 VALUES
-(1, 1, 'Dell XPS 13', 1, 10, 28000.00, '2 năm', 5.0),
-(2, 2, 'HP Spectre x360', 2, 8, 32000.00, '2 năm', 7.5),
-(3, 3, 'MacBook Air', 3, 15, 25000.00, '1 năm', 10.0),
-(4, 4, 'ThinkPad X1', 4, 5, 29000.00, '3 năm', 6.0),
-(5, 5, 'ZenBook 14', 5, 12, 27000.00, '2 năm', 8.0),
-(6, 6, 'Acer Swift 3', 6, 14, 22000.00, '2 năm', 6.5),
-(7, 7, 'MSI GF63 Thin', 7, 9, 20000.00, '1 năm', 7.0),
-(8, 8, 'AORUS 15G', 8, 7, 35000.00, '1 năm', 5.5),
-(9, 9, 'Razer Blade 15', 9, 6, 45000.00, '1 năm', 10.0),
-(10, 10, 'MateBook X Pro', 10, 8, 26000.00, '2 năm', 7.0),
-(11, 11, 'LG Gram 17', 11, 5, 33000.00, '2 năm', 8.0),
-(12, 12, 'Galaxy Book Pro', 12, 10, 24000.00, '1 năm', 6.0),
-(13, 13, 'Surface Laptop 4', 13, 12, 27000.00, '1 năm', 7.5),
-(14, 14, 'Mi Notebook Pro', 14, 9, 25000.00, '2 năm', 6.5),
-(15, 15, 'Blade Stealth 13', 15, 7, 29000.00, '1 năm', 8.0),
-(16, 16, 'ROG Flow Z13', 16, 6, 32000.00, '2 năm', 7.0),
-(17, 17, 'Inspiron 14', 17, 11, 23000.00, '2 năm', 6.0),
-(18, 18, 'Envy 13', 18, 8, 21000.00, '2 năm', 5.5),
-(19, 19, 'Legion 5', 19, 10, 29000.00, '2 năm', 8.0),
-(20, 20, 'MacBook Pro 16', 20, 7, 45000.00, '1 năm', 10.0);
+(1, 1, 'Dell XPS 13', 1, 10, 28000.00, N'2 năm', 5.0),
+(2, 2, 'HP Spectre x360', 2, 8, 32000.00, N'2 năm', 7.5),
+(3, 3, 'MacBook Air', 3, 15, 25000.00, N'1 năm', 10.0),
+(4, 4, 'ThinkPad X1', 4, 5, 29000.00, N'3 năm', 6.0),
+(5, 5, 'ZenBook 14', 5, 12, 27000.00, N'2 năm', 8.0),
+(6, 6, 'Acer Swift 3', 6, 14, 22000.00, N'2 năm', 6.5),
+(7, 7, 'MSI GF63 Thin', 7, 9, 20000.00, N'1 năm', 7.0),
+(8, 8, 'AORUS 15G', 8, 7, 35000.00, N'1 năm', 5.5),
+(9, 9, 'Razer Blade 15', 9, 6, 45000.00, N'1 năm', 10.0),
+(10, 10, 'MateBook X Pro', 10, 8, 26000.00, N'2 năm', 7.0),
+(11, 11, 'LG Gram 17', 11, 5, 33000.00, N'2 năm', 8.0),
+(12, 12, 'Galaxy Book Pro', 12, 10, 24000.00, N'1 năm', 6.0),
+(13, 13, 'Surface Laptop 4', 13, 12, 27000.00, N'1 năm', 7.5),
+(14, 14, 'Mi Notebook Pro', 14, 9, 25000.00, N'2 năm', 6.5),
+(15, 15, 'Blade Stealth 13', 15, 7, 29000.00, N'1 năm', 8.0),
+(16, 16, 'ROG Flow Z13', 16, 6, 32000.00, N'2 năm', 7.0),
+(17, 17, 'Inspiron 14', 17, 11, 23000.00, N'2 năm', 6.0),
+(18, 18, 'Envy 13', 18, 8, 21000.00, N'2 năm', 5.5),
+(19, 19, 'Legion 5', 19, 10, 29000.00, N'2 năm', 8.0),
+(20, 20, 'MacBook Pro 16', 20, 7, 45000.00, N'1 năm', 10.0);
 GO
 
 INSERT INTO District (DistrictId, CityName, DistrictName)
 VALUES
-(1, 'Hà Nội', 'Hoàn Kiếm'),
-(2, 'Hà Nội', 'Cầu Giấy'),
-(3, 'Hà Nội', 'Ba Đình'),
-(4, 'Hồ Chí Minh', 'Quận 1'),
-(5, 'Hồ Chí Minh', 'Quận 3'),
-(6, 'Hồ Chí Minh', 'Quận 7'),
-(7, 'Đà Nẵng', 'Hải Châu'),
-(8, 'Đà Nẵng', 'Thanh Khê'),
-(9, 'Hải Phòng', 'Ngô Quyền'),
-(10, 'Hải Phòng', 'Hồng Bàng'),
-(11, 'Nha Trang', 'Lộc Thọ'),
-(12, 'Nha Trang', 'Vĩnh Hải'),
-(13, 'Cần Thơ', 'Ninh Kiều'),
-(14, 'Cần Thơ', 'Cái Răng'),
-(15, 'Bình Dương', 'Thuận An'),
-(16, 'Bình Dương', 'Dĩ An'),
-(17, 'Vũng Tàu', 'TP Vũng Tàu'),
-(18, 'Vũng Tàu', 'TP Bà Rịa'),
-(19, 'Bắc Ninh', 'Bắc Ninh'),
-(20, 'Hưng Yên', 'Hưng Yên');
+(1, N'Hà Nội', N'Hoàn Kiếm'),
+(2, N'Hà Nội', N'Cầu Giấy'),
+(3, N'Hà Nội', N'Ba Đình'),
+(4, N'Hồ Chí Minh', N'Quận 1'),
+(5, N'Hồ Chí Minh', N'Quận 3'),
+(6, N'Hồ Chí Minh', N'Quận 7'),
+(7, N'Đà Nẵng', N'Hải Châu'),
+(8, N'Đà Nẵng', N'Thanh Khê'),
+(9, N'Hải Phòng', N'Ngô Quyền'),
+(10, N'Hải Phòng', N'Hồng Bàng'),
+(11, N'Nha Trang', N'Lộc Thọ'),
+(12, N'Nha Trang', N'Vĩnh Hải'),
+(13, N'Cần Thơ', N'Ninh Kiều'),
+(14, N'Cần Thơ', N'Cái Răng'),
+(15, N'Bình Dương', N'Thuận An'),
+(16, N'Bình Dương', N'Dĩ An'),
+(17, N'Vũng Tàu', N'TP Vũng Tàu'),
+(18, N'Vũng Tàu', N'TP Bà Rịa'),
+(19, N'Bắc Ninh', N'Bắc Ninh'),
+(20, N'Hưng Yên', N'Hưng Yên');
 GO
 
 INSERT INTO Customer (CustomerID, CustomerFirstName, CustomerLastName, Phone, DistrictId, Addresss, Email)
 VALUES
-(1, 'Nguyễn Văn', 'A', '0901234567', 1, '123 Phố Huế, Hoàn Kiếm', 'nguyenvana@example.com'),
-(2, 'Trần Thị', 'B', '0912345678', 2, '456 Đường Cầu Giấy, Cầu Giấy', 'tranthib@example.com'),
-(3, 'Lê Văn', 'C', '0923456789', 3, '789 Đội Cấn, Ba Đình', 'levanc@example.com'),
-(4, 'Hoàng Thị', 'D', '0934567890', 4, '321 Lê Lợi, Quận 1', 'hoangthid@example.com'),
-(5, 'Phạm Văn', 'E', '0945678901', 5, '654 Nguyễn Thị Minh Khai, Quận 3', 'phamvane@example.com'),
-(6, 'Vũ Thị', 'F', '0956789012', 6, '987 Đường Nguyễn Văn Linh, Quận 7', 'vuthif@example.com'),
-(7, 'Ngô Văn', 'G', '0967890123', 7, '123 Đường 2/9, Hải Châu', 'ngovan@example.com'),
-(8, 'Bùi Thị', 'H', '0978901234', 8, '456 Nguyễn Văn Linh, Thanh Khê', 'buithih@example.com'),
-(9, 'Đỗ Văn', 'I', '0989012345', 9, '789 Đường Trần Phú, Ngô Quyền', 'dovan@example.com'),
-(10, 'Lý Thị', 'J', '0990123456', 10, '321 Đường Hoàng Diệu, Hồng Bàng', 'lythij@example.com'),
-(11, 'Nguyễn Thị', 'K', '0909876543', 11, '123 Nguyễn Thị Minh Khai, Lộc Thọ', 'nguyenthik@example.com'),
-(12, 'Hoàng Văn', 'L', '0918765432', 12, '456 Lê Hồng Phong, Vĩnh Hải', 'hoangvanl@example.com'),
-(13, 'Trần Văn', 'M', '0927654321', 13, '789 Đường 30/4, Ninh Kiều', 'tranvanm@example.com'),
-(14, 'Vũ Văn', 'N', '0936543210', 14, '321 Đường Nguyễn Văn Cừ, Cái Răng', 'vuvan@example.com'),
-(15, 'Lê Thị', 'O', '0945432109', 15, '654 Đường Nguyễn An Ninh, Thuận An', 'lethio@example.com'),
-(16, 'Phạm Thị', 'P', '0954321098', 16, '987 Đường ĐT743, Dĩ An', 'phamthip@example.com'),
-(17, 'Nguyễn Văn', 'Q', '0963210987', 17, '123 Đường Thống Nhất, TP Vũng Tàu', 'nguyenvanq@example.com'),
-(18, 'Trần Thị', 'R', '0972109876', 18, '456 Đường 30/4, TP Bà Rịa', 'tranthir@example.com'),
-(19, 'Vũ Văn', 'S', '0981098765', 19, '789 Đường Nguyễn Du, Bắc Ninh', 'vuvans@example.com'),
-(20, 'Bùi Thị', 'T', '0990987654', 20, '321 Đường Hưng Yên, Hưng Yên', 'buithit@example.com');
+(1, N'Nguyễn Văn', N'An', '0901234567', 1, N'123 Phố Huế, Hoàn Kiếm', 'nguyenvana@example.com'),
+(2, N'Trần Thị', N'Bình', '0912345678', 2, N'456 Đường Cầu Giấy, Cầu Giấy', 'tranthib@example.com'),
+(3, N'Lê Văn', N'Căn', '0923456789', 3, N'789 Đội Cấn, Ba Đình', 'levanc@example.com'),
+(4, N'Hoàng Thị', N'Dương', '0934567890', 4, N'321 Lê Lợi, Quận 1', 'hoangthid@example.com'),
+(5, N'Phạm Văn', N'Cường', '0945678901', 5, N'654 Nguyễn Thị Minh Khai, Quận 3', 'phamvane@example.com'),
+(6, N'Vũ Thị', N'Minh', '0956789012', 6, N'987 Đường Nguyễn Văn Linh, Quận 7', 'vuthif@example.com'),
+(7, N'Ngô Văn', N'Tiến', '0967890123', 7, N'123 Đường 2/9, Hải Châu', 'ngovan@example.com'),
+(8, N'Bùi Thị', N'Hường', '0978901234', 8, N'456 Nguyễn Văn Linh, Thanh Khê', 'buithih@example.com'),
+(9, N'Đỗ Văn', N'Minh', '0989012345', 9, N'789 Đường Trần Phú, Ngô Quyền', 'dovan@example.com'),
+(10, N'Lý Thị', N'Mầu', '0990123456', 10, N'321 Đường Hoàng Diệu, Hồng Bàng', 'lythij@example.com'),
+(11, N'Nguyễn Thị', N'Giang', '0909876543', 11, N'123 Nguyễn Thị Minh Khai, Lộc Thọ', 'nguyenthik@example.com'),
+(12, N'Hoàng Văn', N'Linh', '0918765432', 12, N'456 Lê Hồng Phong, Vĩnh Hải', 'hoangvanl@example.com'),
+(13, N'Trần Văn', N'Mến', '0927654321', 13, N'789 Đường 30/4, Ninh Kiều', 'tranvanm@example.com'),
+(14, N'Vũ Văn', N'Ngọc', '0936543210', 14, N'321 Đường Nguyễn Văn Cừ, Cái Răng', 'vuvan@example.com'),
+(15, N'Lê Thị', N'Oanh', '0945432109', 15, N'654 Đường Nguyễn An Ninh, Thuận An', 'lethio@example.com'),
+(16, N'Phạm Thị', N'Phương', '0954321098', 16, N'987 Đường ĐT743, Dĩ An', 'phamthip@example.com'),
+(17, N'Nguyễn Văn', N'Quyết', '0963210987', 17, N'123 Đường Thống Nhất, TP Vũng Tàu', 'nguyenvanq@example.com'),
+(18, N'Trần Thị', N'Riêng', '0972109876', 18, N'456 Đường 30/4, TP Bà Rịa', 'tranthir@example.com'),
+(19, N'Vũ Văn', N'Sơn', '0981098765', 19, N'789 Đường Nguyễn Du, Bắc Ninh', 'vuvans@example.com'),
+(20, N'Bùi Thị', N'Tuyết', '0990987654', 20, N'321 Đường Hưng Yên, Hưng Yên', 'buithit@example.com');
 GO
 
 INSERT INTO Reviews (RatingId, ProductId, CustomerId, Rating, Comment, Commentdate)
 VALUES
-(1, 1, 1, 5, 'Dell XPS 13 là một chiếc laptop tuyệt vời với thiết kế sang trọng và hiệu năng mạnh mẽ.', '2024-07-01'),
-(2, 2, 2, 4, 'HP Spectre x360 có chất lượng xây dựng tốt, nhưng thời lượng pin có thể cải thiện hơn.', '2024-07-02'),
-(3, 3, 3, 5, 'MacBook Air với chip M1 cực kỳ nhanh và hiệu quả, rất đáng mua.', '2024-07-03'),
-(4, 4, 4, 4, 'ThinkPad X1 có hiệu năng tốt, nhưng giá hơi cao.', '2024-07-04'),
-(5, 5, 5, 5, 'ZenBook 14 là một lựa chọn tuyệt vời với màn hình sắc nét và hiệu suất ổn định.', '2024-07-05'),
-(6, 6, 6, 3, 'Acer Swift 3 có hiệu năng vừa phải, phù hợp cho các nhu cầu cơ bản.', '2024-07-06'),
-(7, 7, 7, 4, 'MSI GF63 Thin có hiệu suất tốt cho game, nhưng thiết kế hơi cồng kềnh.', '2024-07-07'),
-(8, 8, 8, 5, 'AORUS 15G là một laptop mạnh mẽ với hiệu năng chơi game xuất sắc.', '2024-07-08'),
-(9, 9, 9, 5, 'Razer Blade 15 là một chiếc laptop gaming cao cấp với hiệu suất đỉnh cao.', '2024-07-09'),
-(10, 10, 10, 4, 'MateBook X Pro có thiết kế đẹp và hiệu suất tốt, nhưng hơi đắt.', '2024-07-10'),
-(11, 11, 11, 5, 'LG Gram 17 có màn hình lớn và trọng lượng nhẹ, rất phù hợp cho công việc và giải trí.', '2024-07-11'),
-(12, 12, 12, 4, 'Galaxy Book Pro có màn hình đẹp và hiệu suất tốt, nhưng pin không lâu.', '2024-07-12'),
-(13, 13, 13, 5, 'Surface Laptop 4 rất tiện lợi và có chất lượng xây dựng cao.', '2024-07-13'),
-(14, 14, 14, 4, 'Mi Notebook Pro có hiệu suất ổn định, tuy nhiên không nổi bật về thiết kế.', '2024-07-14'),
-(15, 15, 15, 5, 'Blade Stealth 13 là một lựa chọn tuyệt vời với thiết kế mỏng và hiệu năng mạnh mẽ.', '2024-07-15'),
-(16, 16, 16, 4, 'ROG Flow Z13 rất phù hợp cho các nhu cầu gaming và đồ họa.', '2024-07-16'),
-(17, 17, 17, 3, 'Inspiron 14 là một laptop giá cả phải chăng, nhưng hiệu năng không nổi bật.', '2024-07-17'),
-(18, 18, 18, 4, 'Envy 13 có thiết kế đẹp và hiệu suất tốt, nhưng không có nhiều tính năng nổi bật.', '2024-07-18'),
-(19, 19, 19, 5, 'Legion 5 có hiệu năng cao và khả năng chơi game tốt, đáng giá với số tiền bỏ ra.', '2024-07-19'),
-(20, 20, 20, 4, 'MacBook Pro 16 có màn hình tuyệt đẹp và hiệu suất mạnh mẽ, nhưng giá hơi cao.', '2024-07-20');
+(1, 1, 1, 5, N'Dell XPS 13 là một chiếc laptop tuyệt vời với thiết kế sang trọng và hiệu năng mạnh mẽ.', '2024-07-01'),
+(2, 2, 2, 4, N'HP Spectre x360 có chất lượng xây dựng tốt, nhưng thời lượng pin có thể cải thiện hơn.', '2024-07-02'),
+(3, 3, 3, 5, N'MacBook Air với chip M1 cực kỳ nhanh và hiệu quả, rất đáng mua.', '2024-07-03'),
+(4, 4, 4, 4, N'ThinkPad X1 có hiệu năng tốt, nhưng giá hơi cao.', '2024-07-04'),
+(5, 5, 5, 5, N'ZenBook 14 là một lựa chọn tuyệt vời với màn hình sắc nét và hiệu suất ổn định.', '2024-07-05'),
+(6, 6, 6, 3, N'Acer Swift 3 có hiệu năng vừa phải, phù hợp cho các nhu cầu cơ bản.', '2024-07-06'),
+(7, 7, 7, 4, N'MSI GF63 Thin có hiệu suất tốt cho game, nhưng thiết kế hơi cồng kềnh.', '2024-07-07'),
+(8, 8, 8, 5, N'AORUS 15G là một laptop mạnh mẽ với hiệu năng chơi game xuất sắc.', '2024-07-08'),
+(9, 9, 9, 5, N'Razer Blade 15 là một chiếc laptop gaming cao cấp với hiệu suất đỉnh cao.', '2024-07-09'),
+(10, 10, 10, 4, N'MateBook X Pro có thiết kế đẹp và hiệu suất tốt, nhưng hơi đắt.', '2024-07-10'),
+(11, 11, 11, 5, N'LG Gram 17 có màn hình lớn và trọng lượng nhẹ, rất phù hợp cho công việc và giải trí.', '2024-07-11'),
+(12, 12, 12, 4, N'Galaxy Book Pro có màn hình đẹp và hiệu suất tốt, nhưng pin không lâu.', '2024-07-12'),
+(13, 13, 13, 5, N'Surface Laptop 4 rất tiện lợi và có chất lượng xây dựng cao.', '2024-07-13'),
+(14, 14, 14, 4, N'Mi Notebook Pro có hiệu suất ổn định, tuy nhiên không nổi bật về thiết kế.', '2024-07-14'),
+(15, 15, 15, 5, N'Blade Stealth 13 là một lựa chọn tuyệt vời với thiết kế mỏng và hiệu năng mạnh mẽ.', '2024-07-15'),
+(16, 16, 16, 4, N'ROG Flow Z13 rất phù hợp cho các nhu cầu gaming và đồ họa.', '2024-07-16'),
+(17, 17, 17, 3, N'Inspiron 14 là một laptop giá cả phải chăng, nhưng hiệu năng không nổi bật.', '2024-07-17'),
+(18, 18, 18, 4, N'Envy 13 có thiết kế đẹp và hiệu suất tốt, nhưng không có nhiều tính năng nổi bật.', '2024-07-18'),
+(19, 19, 19, 5, N'Legion 5 có hiệu năng cao và khả năng chơi game tốt, đáng giá với số tiền bỏ ra.', '2024-07-19'),
+(20, 20, 20, 4, N'MacBook Pro 16 có màn hình tuyệt đẹp và hiệu suất mạnh mẽ, nhưng giá hơi cao.', '2024-07-20');
 GO
 
 -- Hiển thị thông tin từ tất cả các bảng
@@ -197,4 +197,41 @@ FROM
     INNER JOIN Model m ON p.ModelId = m.ModelId
     -- Kết nối bảng Reviews
     LEFT JOIN Reviews r ON p.ProductId = r.ProductId
+GO
+
+SELECT * FROM Customer
+GO
+
+SELECT 
+    m.CatName AS CategoryName,
+    COUNT(p.ProductId) AS ProductCount
+FROM 
+    Products p
+JOIN 
+    Model m ON p.ModelId = m.ModelId
+GROUP BY 
+    m.CatName;
+GO
+
+SELECT 
+    p.ProductId,
+    p.ProductName,
+    p.Stock,
+    p.Price,
+    p.Waranty,
+    p.Discount,
+    pd.RAM,
+    pd.Graphic,
+    pd.CPU,
+    pd.Display,
+    pd.Types,
+    m.CatName,
+    m.BrandName,
+    m.ModelName
+FROM 
+    Products p
+JOIN 
+    Model m ON p.ModelId = m.ModelId
+JOIN 
+    ProductDetails pd ON p.ProductDetailsId = pd.ProductDetailId;
 GO
