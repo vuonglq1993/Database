@@ -104,6 +104,7 @@ GO
 -- Lấy tất cả các đơn hàng
 SELECT * FROM Orderrs;
 
+
 -- Lấy các đơn hàng đang xử lý
 SELECT * FROM Orderrs WHERE Statuss = N'Đang xử lý';
 
@@ -131,6 +132,8 @@ SELECT * FROM Store WHERE StoreAddress LIKE N'%Hà Nội%';
 -- Lấy các cửa hàng ở Hồ Chí Minh
 SELECT * FROM Store WHERE StoreAddress LIKE N'%Hồ Chí Minh%';
 
+select from Orderrs
+where OrderId = 1
 -- Lấy các cửa hàng ở Đà Nẵng
 SELECT * FROM Store WHERE StoreAddress LIKE N'%Đà Nẵng%';
 
@@ -145,16 +148,6 @@ SELECT * FROM OrderDetails WHERE PaymentMethods = 'C';
 
 -- Lấy các chi tiết đơn hàng thanh toán bằng tiền mặt (ký hiệu 'D')
 SELECT * FROM OrderDetails WHERE PaymentMethods = 'D';
-
-SELECT 
-    OrderDetails.OrderId,
-    SUM(OrderDetails.Quantity * Product.UnitPrice) AS TotalAmount
-FROM 
-    OrderDetails
-INNER JOIN
-    Product ON OrderDetails.ProductId = Product.ProductId
-GROUP BY 
-    OrderDetails.OrderId;
 
 UPDATE Orderrs
 SET TotalAmount = (
