@@ -54,14 +54,14 @@ GO
 
 INSERT INTO Store (StoreId, StoreName, StoreLocation)
 VALUES
-(1, 'Store Hà Nội 1', '123 Phố Huế, Hoàn Kiếm, Hà Nội'),
-(2, 'Store Hà Nội 2', '456 Đường Cầu Giấy, Cầu Giấy, Hà Nội'),
-(3, 'Store Hà Nội 3', '789 Đội Cấn, Ba Đình, Hà Nội'),
-(4, 'Store Hồ Chí Minh 1', '321 Lê Lợi, Quận 1, Hồ Chí Minh'),
-(5, 'Store Hồ Chí Minh 2', '654 Nguyễn Thị Minh Khai, Quận 3, Hồ Chí Minh'),
-(6, 'Store Hồ Chí Minh 3', '987 Đường Nguyễn Văn Linh, Quận 7, Hồ Chí Minh'),
-(7, 'Store Đà Nẵng 1', '123 Đường 2/9, Hải Châu, Đà Nẵng'),
-(8, 'Store Đà Nẵng 2', '456 Nguyễn Văn Linh, Thanh Khê, Đà Nẵng'),
-(9, 'Store Hải Phòng 1', '789 Đường Trần Phú, Ngô Quyền, Hải Phòng'),
-(10, 'Store Hải Phòng 2', '321 Đường Hoàng Diệu, Hồng Bàng, Hải Phòng');
+(1, N'Store Hà Nội 1', N'123 Phố Huế, Hoàn Kiếm, Hà Nội'),
+(2, N'Store Hà Nội 2', N'456 Đường Cầu Giấy, Cầu Giấy, Hà Nội'),
+(3, N'Store Hà Nội 3', N'789 Đội Cấn, Ba Đình, Hà Nội'),
+(4, N'Store Hồ Chí Minh 1', N'321 Lê Lợi, Quận 1, Hồ Chí Minh'),
+(5, N'Store Hồ Chí Minh 2', N'654 Nguyễn Thị Minh Khai, Quận 3, Hồ Chí Minh'),
+(6, N'Store Hồ Chí Minh 3', N'987 Đường Nguyễn Văn Linh, Quận 7, Hồ Chí Minh'),
+(7, N'Store Đà Nẵng 1', N'123 Đường 2/9, Hải Châu, Đà Nẵng'),
+(8, N'Store Đà Nẵng 2', N'456 Nguyễn Văn Linh, Thanh Khê, Đà Nẵng'),
+(9, N'Store Hải Phòng 1', N'789 Đường Trần Phú, Ngô Quyền, Hải Phòng'),
+(10, N'Store Hải Phòng 2', N'321 Đường Hoàng Diệu, Hồng Bàng, Hải Phòng');
 GO
